@@ -1,0 +1,28 @@
+{
+  "name": "dmx",
+  "description": "DevMatrix Workshop MCP gateway — read/write specs (.dmx) and platform wikis (.md) from your own Claude Code, authenticated with a platform-scoped, Workshop-only API key.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ariel Ghysels",
+    "email": "aeghysels@devmatrix.dev"
+  },
+  "homepage": "https://github.com/devmatrix-ai/devmatrix-mcp",
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "DevMatrix Workshop API key",
+      "description": "Your Workshop key (starts with dm_live_). Create it in the DevMatrix Workshop under Settings -> API Keys (Workshop key, pick platform(s) + read/write). It is platform-scoped and Workshop-only. Stored in your OS keychain, never in plaintext.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "mcpServers": {
+    "dmx": {
+      "type": "http",
+      "url": "https://mcp.devmatrix.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_key}"
+      }
+    }
+  }
+}

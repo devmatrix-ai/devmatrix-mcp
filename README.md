@@ -27,6 +27,22 @@ In the DevMatrix Workshop: **Settings → API Keys → New Workshop key**.
 
 ## 2. Connect Claude Code
 
+### Recommended — install as a plugin (key stays in your OS keychain)
+
+```bash
+/plugin marketplace add devmatrix-ai/devmatrix-mcp
+/plugin install dmx@devmatrix
+```
+
+Claude Code prompts for your Workshop key once, stores it **encrypted in your OS
+keychain** (never in plaintext), and the MCP server connects automatically. This
+is the most secure option — the key never lands in a config file.
+
+To update later: `/plugin marketplace update devmatrix` · to remove:
+`/plugin uninstall dmx@devmatrix`.
+
+### Alternatives (key stored in your Claude Code config in plaintext)
+
 **One-liner:**
 
 ```bash
@@ -46,7 +62,8 @@ copy it into your project root and replace the placeholder key.
 Verify:
 
 ```bash
-claude mcp list        # dmx should be listed
+claude mcp list        # dmx should be listed (manual/.mcp.json modes)
+/plugin                # the plugin shows under installed plugins
 ```
 
 ## 3. Use it
@@ -78,9 +95,10 @@ Once connected, ask Claude Code things like:
 
 ## Security
 
-- **Your key, your machine.** The key lives only in your Claude Code config
-  (server-side on your machine) and travels only as an `Authorization` header
-  over HTTPS. It is never placed in a browser and never exposed to page JS.
+- **Your key, your machine.** With the plugin, the key is stored **encrypted in
+  your OS keychain** (never in plaintext); with the manual modes it lives in your
+  Claude Code config. Either way it travels only as an `Authorization` header over
+  HTTPS — never placed in a browser, never exposed to page JS. Prefer the plugin.
 - **Ultra-scoped.** A leaked key reaches only its granted platform(s) and only
   Workshop read/(write) — never destructive or account-wide actions.
 - **Backend is the single authority.** The gateway holds no business logic; the
