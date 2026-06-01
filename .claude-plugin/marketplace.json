@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "dmx",
-      "source": "./",
+      "source": "./dmx",
       "description": "DevMatrix Workshop MCP gateway — read/write specs (.dmx) and platform wikis (.md) from Claude Code, authenticated with a platform-scoped, Workshop-only API key.",
       "version": "1.0.0",
       "author": {
