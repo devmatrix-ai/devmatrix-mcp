@@ -13,8 +13,11 @@
 #     local:      http://localhost:8090/mcp
 set -euo pipefail
 
+# NOTE: temporarily defaults to the dev gateway (mcp-dev) — the prod gateway
+# (mcp.devmatrix.dev) does not yet have the Workshop-key backend (pending the
+# dev->main release). Pass the prod URL as arg 2 once it's live.
 KEY="${1:-}"
-URL="${2:-https://mcp.devmatrix.dev/mcp}"
+URL="${2:-https://mcp-dev.devmatrix.dev/mcp}"
 NAME="dmx"
 
 if [ -z "$KEY" ]; then

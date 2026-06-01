@@ -1,5 +1,10 @@
 # DevMatrix MCP — Workshop connector for Claude Code
 
+> ⚠️ **Temporary:** this connector currently points to the **dev** gateway
+> (`mcp-dev.devmatrix.dev`) — use a Workshop key from `dev.devmatrix.dev`. The
+> prod gateway (`mcp.devmatrix.dev`) does not yet have the Workshop-key backend;
+> it will switch to prod once released.
+
 Drive the **DevMatrix Workshop** (read & write specs and platform wikis) from
 **your own Claude Code** — your Claude subscription, used interactively, 100%
 within Anthropic's Terms of Service. DevMatrix exposes the Workshop as an
@@ -52,7 +57,7 @@ To update later: `/plugin marketplace update devmatrix` · to remove:
 **Or manually** (Claude Code's native HTTP MCP transport):
 
 ```bash
-claude mcp add --transport http dmx https://mcp.devmatrix.dev/mcp \
+claude mcp add --transport http dmx https://mcp-dev.devmatrix.dev/mcp \
   --header "Authorization: Bearer dm_live_your_key_here"
 ```
 

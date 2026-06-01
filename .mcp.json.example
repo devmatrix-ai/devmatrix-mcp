@@ -2,7 +2,7 @@
   "mcpServers": {
     "dmx": {
       "type": "http",
-      "url": "https://mcp.devmatrix.dev/mcp",
+      "url": "https://mcp-dev.devmatrix.dev/mcp",
       "headers": {
         "Authorization": "Bearer dm_live_REPLACE_WITH_YOUR_WORKSHOP_KEY"
       }
