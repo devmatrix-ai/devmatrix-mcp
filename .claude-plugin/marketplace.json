@@ -1,23 +1,23 @@
 {
   "name": "devmatrix",
-  "description": "DevMatrix Workshop MCP — connect your own Claude Code to the DevMatrix Workshop",
+  "description": "DevMatrix — connect your own Claude Code to the DevMatrix Workshop",
   "owner": {
     "name": "Ariel Ghysels",
     "email": "aeghysels@devmatrix.dev"
   },
   "plugins": [
     {
-      "name": "dmx",
-      "source": "./dmx",
-      "description": "DevMatrix Workshop MCP gateway — read/write specs (.dmx) and platform wikis (.md) from Claude Code, authenticated with a platform-scoped, Workshop-only API key.",
-      "version": "1.0.2",
+      "name": "devmatrix",
+      "source": "./devmatrix",
+      "description": "DevMatrix — read/write specs (.dmx) and platform wikis (.md) from Claude Code, authenticated with a platform-scoped, Workshop-only API key.",
+      "version": "1.0.3",
       "author": {
         "name": "Ariel Ghysels",
         "email": "aeghysels@devmatrix.dev"
       },
       "homepage": "https://github.com/devmatrix-ai/devmatrix-mcp",
       "repository": "https://github.com/devmatrix-ai/devmatrix-mcp",
-      "keywords": ["mcp", "devmatrix", "workshop", "dmx"]
+      "keywords": ["mcp", "devmatrix", "workshop"]
     }
   ]
 }

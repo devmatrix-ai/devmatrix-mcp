@@ -36,7 +36,7 @@ In the DevMatrix Workshop: **Settings → API Keys → New Workshop key**.
 
 ```bash
 /plugin marketplace add devmatrix-ai/devmatrix-mcp
-/plugin install dmx@devmatrix
+/plugin install devmatrix@devmatrix
 ```
 
 Claude Code prompts for your Workshop key once, stores it **encrypted in your OS
@@ -44,7 +44,7 @@ keychain** (never in plaintext), and the MCP server connects automatically. This
 is the most secure option — the key never lands in a config file.
 
 To update later: `/plugin marketplace update devmatrix` · to remove:
-`/plugin uninstall dmx@devmatrix`.
+`/plugin uninstall devmatrix@devmatrix`.
 
 ### Alternatives (key stored in your Claude Code config in plaintext)
 
@@ -57,7 +57,7 @@ To update later: `/plugin marketplace update devmatrix` · to remove:
 **Or manually** (Claude Code's native HTTP MCP transport):
 
 ```bash
-claude mcp add --transport http dmx https://mcp-dev.devmatrix.dev/mcp \
+claude mcp add --transport http DevMatrix https://mcp-dev.devmatrix.dev/mcp \
   --header "Authorization: Bearer dm_live_your_key_here"
 ```
 
@@ -67,7 +67,7 @@ copy it into your project root and replace the placeholder key.
 Verify:
 
 ```bash
-claude mcp list        # dmx should be listed (manual/.mcp.json modes)
+claude mcp list        # DevMatrix should be listed (manual/.mcp.json modes)
 /plugin                # the plugin shows under installed plugins
 ```
 
@@ -132,7 +132,7 @@ Once connected, ask Claude Code things like:
 - **404 / "not found" on a platform you expected** — that platform is not in
   the key's scope. Add it to the key's scope in the Workshop UI (or create a
   new key) and reconnect.
-- **Remove the connection:** `claude mcp remove dmx`.
+- **Remove the connection:** `claude mcp remove DevMatrix`.
 
 ---
 

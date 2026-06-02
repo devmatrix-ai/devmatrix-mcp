@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "dmx": {
+    "DevMatrix": {
       "type": "http",
       "url": "https://mcp-dev.devmatrix.dev/mcp",
       "headers": {

@@ -1,7 +1,7 @@
 {
-  "name": "dmx",
-  "description": "DevMatrix Workshop MCP gateway — read/write specs (.dmx) and platform wikis (.md) from your own Claude Code, authenticated with a platform-scoped, Workshop-only API key.",
-  "version": "1.0.2",
+  "name": "devmatrix",
+  "description": "DevMatrix — read/write specs (.dmx) and platform wikis (.md) from your own Claude Code, authenticated with a platform-scoped, Workshop-only API key.",
+  "version": "1.0.3",
   "author": {
     "name": "Ariel Ghysels",
     "email": "aeghysels@devmatrix.dev"
@@ -17,7 +17,7 @@
     }
   },
   "mcpServers": {
-    "dmx": {
+    "DevMatrix": {
       "type": "http",
       "url": "https://mcp-dev.devmatrix.dev/mcp",
       "headers": {

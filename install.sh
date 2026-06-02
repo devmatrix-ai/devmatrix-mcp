@@ -18,7 +18,7 @@ set -euo pipefail
 # dev->main release). Pass the prod URL as arg 2 once it's live.
 KEY="${1:-}"
 URL="${2:-https://mcp-dev.devmatrix.dev/mcp}"
-NAME="dmx"
+NAME="DevMatrix"
 
 if [ -z "$KEY" ]; then
   echo "Usage: ./install.sh <dm_live_… Workshop key> [mcp-url]" >&2
@@ -36,7 +36,7 @@ case "$KEY" in
      exit 2 ;;
 esac
 
-# Idempotent: drop any existing 'dmx' registration before re-adding, so
+# Idempotent: drop any existing 'DevMatrix' registration before re-adding, so
 # re-running with a new key or URL never errors on a duplicate name.
 if claude mcp list 2>/dev/null | grep -q "^${NAME}\b"; then
   echo "ℹ️  Replacing existing '${NAME}' MCP registration…"
